@@ -1,0 +1,17 @@
+
+
+
+
+#box {
+    border-color: black;
+    border-width: 10px;
+    width: 120px;
+    height: 120px;
+    background-color: #ffffff;
+    border-style: solid;
+  
+  }
+
+  body:hover {
+    background-color: green;
+  }
