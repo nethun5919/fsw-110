@@ -1,3 +1,4 @@
+  
 function myFunction() {
     document.getElementById("Form").submit();
 }
@@ -10,4 +11,3 @@ const form= document.myform
 form.addElementListner("subit", (event) =>{
     evernt.preventDefault()
     console.log(form.decision)}
-
