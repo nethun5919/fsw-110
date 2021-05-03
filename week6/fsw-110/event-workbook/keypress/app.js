@@ -3,3 +3,10 @@
 Example of output: You've pressed the "a" key. It's key code is 65.
 
 Wes Bos made this https://keycode.info/ for us to use as an example. */
+
+
+    function myFunction(event) {
+      var x = event.which || event.keyCode;
+      document.getElementById("demo").innerHTML = "The Unicode value is: " + x;
+    }
+   
