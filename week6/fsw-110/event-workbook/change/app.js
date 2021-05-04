@@ -1,16 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Some data binding</h1>
-    <h3>Type something in the input box, and then press tab or click outside the input box</h3>
-    <input id="change-me"/>
-    <div id="output"></div>
-    <script src="app.js"></script>
-</body>
-</html>
+var input = document.getElementById("change-me");
+// select our input by ID and assign it to the variable, "input"
+
+// use the add event listener method to put an event on "input"
+// "change" is one of a few dozen strings and add event listener will understand. It's our first argument 
+input.addEventListener("change", function(e){ // we pass an entire function as the second argument. 
+    document.getElementById("output").textContent = e.target.value
+    // select the div, and change the "textContent" property to the value of the events target (the input box)
+})
+
+// "e" is important here. You can define it as "event" or whatever you need, but it's common to just call it "e"
+// it has properties that help describe the event, includeing the "e.target" object
+// if the target (whatever you put the event listener on) is an input box, "e.target" has a ".value" property. And it's whatever is in the input box. 
+// Even if your input box is type="number", the value will be a string. Like, "243" vs 243. Remember, "1" + "1" === "11"
